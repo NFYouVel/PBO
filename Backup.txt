@@ -1,0 +1,48 @@
+// Getter
+    public int GetRadius() {
+        return radius;
+    }
+
+    public int GetHeight() {
+        return height;
+    }
+
+    public int GetWidth() {
+        return width;
+    }
+
+    public int GetLength() {
+        return length;
+    }
+
+    public int GetSide() {
+        return side;
+    }
+
+    // Setter
+    public void SetRadius(int input) {
+        this.radius = input;
+    }
+
+    public void SetHeight(int input) {
+        this.height = input;
+    }
+
+    public void SetWidth(int input) {
+        this.width = input;
+    }
+
+    public void SetLength(int input) {
+        this.length = input;
+    }
+
+    public void SetSide(int input) {
+        this.side = input;
+    }
+
+    
+    // private int radius;
+    // private int height;
+    // private int width;
+    // private int length;
+    // private int side;

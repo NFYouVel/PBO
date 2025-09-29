@@ -65,7 +65,7 @@ class Cat extends Animal {
     public Cat(String name, int age, String food, Gender gender, Status alive) {
         super(name, age, food, gender, alive);
     }
-
+    
     @Override
     public String printSound() {
         return "Meow!";
@@ -149,7 +149,7 @@ class Horse extends Animal {
 }
 
 // Main class
-public class App {
+public class Geometry {
     public static void main(String[] args) {
         Animal cat = new Cat("Mimi", 2, "Fish", Gender.FEMALE, Status.ALIVE);
         Animal dog = new Dog("Max", 3, "Bone", Gender.MALE, Status.ALIVE);

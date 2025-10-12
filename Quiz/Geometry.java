@@ -147,7 +147,7 @@ public class Geometry {
         Menu();
         int menu = sc.nextInt();
         if (menu == 1) { // Add New
-            
+            System.out.println("Selamat datang");
         } else if (menu == 2) { //Print All
             
         } else { // Menu Exit

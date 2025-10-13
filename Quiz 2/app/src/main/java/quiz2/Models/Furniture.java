@@ -10,4 +10,10 @@ public abstract class Furniture {
     }
 
     public abstract String getNamaProduk();
+
+    @Override
+    public String toString(){
+        return "Berat: " + berat + "\n"
+            +  "Bahan Utama:" + bahanUtama;
+    }
 }

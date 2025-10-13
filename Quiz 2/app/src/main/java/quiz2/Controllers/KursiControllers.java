@@ -19,17 +19,19 @@ public class KursiControllers {
         } else if (bahan.equalsIgnoreCase("kayu")) {
             bahanUtama = bahanUtama.KAYU;
         } else {
-            bahanUtama = bahanUtama.KAYU;
+            bahanUtama = bahanUtama.PLASTIK;
         }
 
         boolean adaSandaran;
-        if (inputBeratDanSandaran[1].equalsIgnoreCase("n")) {
-            adaSandaran = false;
-        } else {
-            adaSandaran = true;
-        }
+        adaSandaran = !inputBeratDanSandaran[1].equalsIgnoreCase("n");
 
         Kursi kursi = new Kursi(berat, bahanUtama, adaSandaran);
         listKursi.add(kursi);
+    }
+
+    public static void PrintAllKursi(){
+        for (Kursi kursi : listKursi) {
+            System.out.println(kursi);
+        }
     }
 }

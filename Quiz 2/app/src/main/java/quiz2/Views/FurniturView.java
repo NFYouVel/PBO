@@ -1,7 +1,9 @@
 package quiz2.Views;
 
+import java.awt.print.Printable;
+
 import quiz2.Controllers.KursiControllers;
-import quiz2.Controllers.ObjectControllers;
+import quiz2.Controllers.MejaControllers;
 import quiz2.Util.CLIUtil;
 
 public class FurniturView {
@@ -10,10 +12,15 @@ public class FurniturView {
     int menu = this.getMenuInput();// 1
     
     while (menu != 0) {
-      int subMenu = this.getMenuFurnitur(); // 1
+
+      if (menu == 2) {
+        PrintAll();
+        continue;
+      }
+      int subMenu = this.getMenuFurnitur(); // 2
       CLIUtil.getString();
       String bahan = this.getMenuBahan(); // Besi
-      handleMenu(subMenu, subMenu, bahan);
+      handleMenu(menu, subMenu, bahan);
       menu = this.getMenuInput();
     }
   }
@@ -23,7 +30,7 @@ public class FurniturView {
         case 1:
             switch (subMenu) {
                 case 1:
-                    ObjectControllers.InputNewObject();
+                    MejaControllers.InputNewObject();
                     break;
                 case 2:
                     String getData[];
@@ -46,7 +53,7 @@ public class FurniturView {
  }
 
   private void PrintAll(){
-
+    KursiControllers.PrintAllKursi();
   }
 
   private String[] getMenuKursi(){
@@ -59,6 +66,19 @@ public class FurniturView {
     String output[] = new String[2];
     output[0] = berat;
     output[1] = sandaran;
+    return output;
+  }
+
+  private String[] getMenuMeja(){
+    System.out.println("Menu Detail Kursi: ");
+    System.out.print("1. Masukkan berat kursi: ");
+    String berat = CLIUtil.getString();
+    System.out.print("2. Jumlah Laci: ");
+    String laci = CLIUtil.getString();
+
+    String output[] = new String[2];
+    output[0] = berat;
+    output[1] = laci;
     return output;
   }
 

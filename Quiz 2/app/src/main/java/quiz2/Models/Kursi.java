@@ -20,4 +20,10 @@ public class Kursi extends Furniture{
     public String getNamaProduk(){
         return "Kursi";
     };
+
+    @Override
+    public String toString(){
+        return "------------------------\n" + super.toString() 
+        + "Ada Sandaran: " + adaSandaran;
+    }
 }

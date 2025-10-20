@@ -61,6 +61,7 @@ public class VehicleView {
         System.out.println(str.toString());
         int pilihan = CLIUtil.getInt();
 
+        System.out.println("Masukkan nama: ");
         String nama = CLIUtil.getString();
         switch (pilihan) {
             case 1:
@@ -96,7 +97,7 @@ public class VehicleView {
                 int kapasitas_pesawat = Integer.parseInt(CLIUtil.getString());
                 System.out.println("Masukkan jumlah roda: ");
                 int jumlahroda = Integer.parseInt(CLIUtil.getString());
-                System.out.println("apakah pesawat temput: ");
+                System.out.println("apakah pesawat tempur: ");
                 boolean pesawattempur = CLIUtil.getBoolean();
                 vehicleController.addVehicle(kapasitas_pesawat, nama, pesawattempur, jumlahroda);
                 break;

@@ -3,12 +3,17 @@
  */
 package uts;
 
-public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
+import uts.controllers.VehicleController;
+import uts.models.repo.VehicleRepository;
+import uts.views.VehicleView;
 
+public class App {
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        VehicleRepository VehicleRepository = new VehicleRepository();
+        VehicleView VehicleView = new VehicleView();
+        VehicleController VehicleController = new VehicleController(VehicleRepository, VehicleView);
+        VehicleView.setVehicleController(VehicleController);
+
+        VehicleController.StartMenu();
     }
 }

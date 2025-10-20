@@ -3,7 +3,7 @@ package uts.models;
 public class Pesawat extends SkyVehicle implements Kargoable{
     private boolean isPesawatTempur;
     private int jumlahRoda;
-    public Pesawat(int capacity, String nama, int sumRoda, boolean isPesawatTempur, int jumlahRoda){
+    public Pesawat(int capacity, String nama, boolean isPesawatTempur, int jumlahRoda){
         super(capacity, nama, BahanBakar.AVTUR);
         this.isPesawatTempur = isPesawatTempur;
         this.jumlahRoda = jumlahRoda;
